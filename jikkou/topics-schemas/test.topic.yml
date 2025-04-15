@@ -1,3 +1,7 @@
-aabcaaacccaaa
-aaaaa
-bbbbbb
+apiVersion: 'kafka.jikkou.io/v1beta2'
+kind: 'KafkaTopic'
+metadata:
+  name: 'topic.name.example.1'
+spec:
+  partitions: 4
+  replicas: 2
