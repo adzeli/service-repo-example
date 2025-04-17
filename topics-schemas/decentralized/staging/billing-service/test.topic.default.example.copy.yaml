@@ -1,0 +1,17 @@
+apiVersion: 'kafka.jikkou.io/v1beta2'
+kind: 'KafkaTopic'
+metadata:
+  name: 'topic.name.example.1'
+spec:
+  partitions: 4
+  replicas: 2
+---
+apiVersion: 'schemaregistry.jikkou.io/v1beta2'
+kind: 'SchemaRegistrySubject'
+metadata:
+  name: "topic.name.example.1-value"
+spec:
+  compatibilityLevel: 'NONE'
+  schemaType: 'AVRO'
+  schema:
+    $ref: ./system-name/avro/topic.name.example.1-value.avsc
